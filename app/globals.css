@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --color-bg: #f5f1e8;
+  --color-panel: #ffffff;
+  --color-green: #1f5a3d;
+  --color-accent: #e9b75d;
+  --color-soft: #dde9d8;
+  --color-text: #1f2a1f;
+  --color-muted: #687a6d;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  transition: all 0.2s ease;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(31, 90, 61, 0.35);
+  outline-offset: 2px;
+}
+
+.panel {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(31, 90, 61, 0.08);
+  border-radius: 1.25rem;
+  box-shadow: 0 16px 45px rgba(31, 90, 61, 0.08);
+}
+
+.primary-button {
+  border: none;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #1f5a3d 0%, #285d45 100%);
+  color: white;
+  font-weight: 700;
+  padding: 0.9rem 1.2rem;
+  min-height: 46px;
+}
+
+.subtle-button {
+  border: 1px solid rgba(31, 90, 61, 0.15);
+  border-radius: 1rem;
+  background: #ffffff;
+  color: #1f2a1f;
+  font-weight: 600;
+  padding: 0.9rem 1.2rem;
+  min-height: 46px;
+}
+
+.choice-button {
+  width: 100%;
+  border: 1px solid rgba(31, 90, 61, 0.18);
+  border-radius: 1rem;
+  background: #fff;
+  color: var(--color-text);
+  padding: 0.9rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.choice-button-active {
+  background: rgba(31, 90, 61, 0.08);
+  border-color: rgba(31, 90, 61, 0.4);
+}
+
+.nav-button {
+  width: 100%;
+  border-radius: 0.9rem;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--color-muted);
+  font-weight: 600;
+  padding: 0.8rem 0.9rem;
+  text-align: left;
+}
+
+.nav-button-active {
+  background: rgba(31, 90, 61, 0.08);
+  color: var(--color-green);
+  border-color: rgba(31, 90, 61, 0.2);
+}
+
+.nav-pill {
+  border-radius: 0.9rem;
+  background: transparent;
+  color: var(--color-muted);
+  border: 1px solid transparent;
+  min-height: 48px;
+  font-weight: 600;
+}
+
+.nav-pill-active {
+  background: rgba(31, 90, 61, 0.08);
+  color: var(--color-green);
+  border-color: rgba(31, 90, 61, 0.2);
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  background: rgba(233, 183, 93, 0.18);
+  color: #8f5a00;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.4rem 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.onboarding-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: radial-gradient(circle at top, rgba(221, 233, 216, 0.75), rgba(245, 241, 232, 1));
+}
+
+@media (max-width: 640px) {
+  .primary-button,
+  .subtle-button,
+  .choice-button,
+  .nav-pill {
+    min-height: 48px;
+  }
+}
